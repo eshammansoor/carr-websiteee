@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+</head>
+<body>
+  <model-viewer 
+  src="https://modelviewer.dev/shared-assets/models/toy_car.glb" 
+  alt="A 3D toy car" 
+  auto-rotate 
+  camera-controls 
+  style="position: fixed; bottom: 10px; right: 10px; width: 200px; height: 150px; z-index: 999;"
+></model-viewer>
+
+     <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: url('peter-broomfield-m3m-lnR90uM-unsplash.jpg') center/cover no-repeat fixed;
+      color: #0c0b0b;
+      position: relative;
+    }
+body::before {    
+  position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: rgba(10, 10, 10, 0.288); /* semi-transparent white overlay */
+     }
+
+    
+    header {
+      background-color: #111;
+      color: white;
+      padding: 20px 40px;
+      position: sticky;
+      
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 30px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: #ff6600;
+      border-radius: 4px;
+    }
+
+    .search-bar {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .search-bar input {
+      padding: 8px;
+      width: 250px;
+      border-radius: 4px 0 0 4px;
+      border: none;
+      outline: none;
+    }
+
+    .search-bar button {
+      padding: 8px 12px;
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    section {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .hero {
+      background: none;
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      border-radius: 12px;
+      background-color: rgba(114, 14, 14, 0.438);
+      color: rgb(233, 225, 225);
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(219, 19, 19, 0.363);
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 8px rgba(116, 15, 15, 0.63);
+    }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+
+    .about-text, .contact-text {
+      line-height: 1.8;
+      font-size: 1.1em;
+    }
+
+    .car-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .car {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .car:hover {
+      transform: scale(1.03);
+    }
+
+    .car img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .car-info {
+      padding: 15px;
+    }
+
+    footer {
+      background-color: #7916168e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <h1>SpeedDrive</h1>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#cars">Cars</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search cars...">
+      <button>Search</button>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Drive Your Dream Car</h1>
+    <p>Browse the latest models and unbeatable prices at SpeedDrive Motors.</p>
+  </section>
+
+  <section id="about">
+    <h2><u>About Us</u></h2>
+    <div class="about-text">
+      <p>SpeedDrive Motors has been revolutionizing the automotive market since 2010. We are committed to delivering top-tier vehicles, unmatched service, and a seamless car-buying experience. Whether you're after luxury, performance, or electric innovation, our team will help you find the perfect fit.</p>
+      <p style="margin-top: 15px;">Our inventory includes top brands like Porsche, Audi, Tesla, BMW, and Mercedes-Benz. We believe in quality, transparency, and long-term customer relationships.</p>
+    </div>
+  </section>
+
+  <section id="cars">
+    <h2>Our Cars</h2>
+    <div class="car-list">
+      <div class="car">
+        <img src="car.jpeg" alt="Porsche" />
+        <div class="car-info">
+          <h3>2024 Porsche 911 Turbo</h3>
+          <p>Legendary performance with cutting-edge technology. $150,000.</p>
+        </div>
+      </div>
+      <div class="car">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="Audi R8" />
+        <div class="car-info">
+          <h3>2024 Audi R8</h3>
+          <p>Supercar thrill with luxury comfort. $160,000.</p>
+        </div>
+      </div>
+      <div class="car">
+        <img src="car1.jpeg" alt="Tesla Model S" />
+        <div class="car-info">
+          <h3>2024 Tesla Model S Plaid</h3>
+          <p>Insane speed, zero emissions. $90,000.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-text">
+      <p>📍 Address: 1234 SpeedDrive Lane, Motor City, USA</p>
+      <p>📞 Phone: (555) 123-4567</p>
+      <p>✉️ Email: support@speeddrivemotors.com</p>
+      <p style="margin-top: 15px;">We're open Mon–Sat from 9:00 AM to 6:00 PM. Feel free to reach out with questions or schedule a test drive!</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SpeedDrive Motors. All rights reserved.</p>
+  </footer>
+
+   
+</body>
+</html>
